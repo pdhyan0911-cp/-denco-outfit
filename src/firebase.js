@@ -44,6 +44,7 @@ export {
   signOut,
   onAuthStateChanged,
   updateProfile,
+  reload,
   doc,
   getDoc,
   setDoc,
