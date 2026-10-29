@@ -152,3 +152,6 @@ footer{background:#f0ece3}
 .recaptcha-slot:empty{display:none}
 .account-note{display:block;margin-top:16px;color:#a9a49a;font-size:11px;line-height:1.6}
 @media(max-width:480px){.account-drawer{width:min(100%,420px)}.auth-tabs button,.auth-switch button{font-size:12px}.recaptcha-slot iframe{max-width:100%}}
+
+/* Guest-first shopping and checkout gate */
+.guest-button{width:100%;justify-content:center;margin:0 0 14px;gap:8px}
