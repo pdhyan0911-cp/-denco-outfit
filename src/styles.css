@@ -155,3 +155,10 @@ footer{background:#f0ece3}
 
 /* Guest-first shopping and checkout gate */
 .guest-button{width:100%;justify-content:center;margin:0 0 14px;gap:8px}
+
+/* Marketplace shopping links */
+.affiliate-cta{display:flex;align-items:center;gap:7px;justify-content:center;pointer-events:none;font-size:11px}
+.affiliate-retailers{display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding-top:12px}
+.affiliate-retailers small{width:100%;font-size:10px;letter-spacing:.04em;color:#777}
+.affiliate-retailers a{display:inline-flex;align-items:center;gap:4px;border:1px solid #dedbd4;border-radius:999px;padding:6px 9px;font-size:10px;color:inherit;text-decoration:none;background:#fffdf9}
+.affiliate-retailers a:hover{border-color:#a88953;background:#f4efe5}
