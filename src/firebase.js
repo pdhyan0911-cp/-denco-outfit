@@ -12,6 +12,7 @@ import {
   signOut,
   onAuthStateChanged,
   updateProfile,
+  reload,
 } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
 
