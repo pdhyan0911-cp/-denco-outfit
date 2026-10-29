@@ -121,3 +121,6 @@ footer{background:#f0ece3}
  .section-top h2{font-size:48px}
 }
 @media(prefers-reduced-motion:reduce){.atelier-tile img,.mood,.heart-btn{transition:none}}
+
+/* Marketplace-style colour variant selector */
+.variant-caption{font-size:10px;color:#77736b;margin-top:10px}.variant-caption span{color:#27251f;font-weight:600}.variant-swatches{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}.variant-swatch{width:19px;height:19px;border-radius:50%;border:1px solid #d3cfc6;box-shadow:inset 0 0 0 2px #fff;cursor:pointer;transition:transform .18s,border-color .18s}.variant-swatch:hover,.variant-swatch:focus-visible{transform:scale(1.14);border-color:#9f824a;outline:1px solid #9f824a;outline-offset:2px}.product-name{line-height:1.5;min-height:2.8em}
