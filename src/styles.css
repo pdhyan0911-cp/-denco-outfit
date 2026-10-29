@@ -32,3 +32,17 @@ footer{padding:45px 7% 22px;background:#efeadf}.footer-bottom{border-top-color:#
 @media(max-width:1050px){.shop-section{padding:85px 4%}.product-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 15px}}
 @media(max-width:760px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 12px}.product-info{padding-top:12px}.product-name{min-height:0}.quick-add{opacity:1;padding:11px 8px}}
 @media(max-width:520px){.shop-section{padding:58px 14px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 12px}.product-image{aspect-ratio:3/4}.product-info{padding-top:10px}.product-name{line-height:1.45}.quick-add{font-size:9px}}
+
+/* EXTRA-WIDE DESKTOP: TWELVE PRODUCTS PER ROW */
+@media(min-width:1600px){
+  .product-grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:28px 12px}
+  .shop-section{padding-left:3%;padding-right:3%}
+  .product-image{aspect-ratio:3/4.25}
+  .product-tag{top:7px;left:6px;font-size:6px;padding:5px}
+  .heart-btn{top:6px;right:6px;width:28px;height:28px}
+  .product-info{padding:10px 1px 0}
+  .product-brand{font-size:7px;letter-spacing:.8px}
+  .product-name,.product-price{font-size:9px}
+  .product-name{line-height:1.4;min-height:38px}
+  .quick-add{left:5px;right:5px;bottom:5px;padding:9px 6px;font-size:8px}
+}
