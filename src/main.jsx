@@ -11,7 +11,24 @@ const seedProducts=[
 {id:9,name:'Sculpted Stud Earrings',brand:'OBJECTS DEPT.',price:799,category:'Earrings',tag:'OBJECTS EDIT',image:'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=85'}
 ];
 const categories=['T-shirts & Polos','Shirts & Overshirts','Jeans, Trousers & Cargos','Sneakers & Footwear','Jackets, Hoodies & Sweatshirts','Watches','Bracelets','Earrings','Other Accessories'];
-const products=categories.flatMap((category,ci)=>Array.from({length:60},(_,i)=>{const base=seedProducts[ci];const adjectives=['Essential','Modern','Relaxed','Everyday','Studio','Classic','Refined','Urban','Minimal','Premium','Utility','Weekend'];const suffixes=['Edition','Essential','Classic Fit','Daily Wear','Signature','Modern Cut','Core Piece','Studio Series','Relaxed Fit','Seasonal Edit'];return {...base,id:ci*60+i+1,category,name:i===0?base.name:adjectives[(i+ci)%adjectives.length]+' '+base.name.replace(/^(The |Everyday |Modern |Studio |Relaxed |Minimal |After Hours |Sculpted )/,'')+' — '+suffixes[(i+ci)%suffixes.length]+' '+String(i+1).padStart(2,'0'),price:Math.max(399,base.price+((i%12)-5)*100),tag:i===0?base.tag:'CURATED EDIT'}}));
+const productLooks=[
+[['black','white','navy','blue','cream','olive','burgundy','grey','beige','forest green'],['polo shirt','striped polo shirt','cotton crew-neck tee','oversized graphic tee','minimal logo t-shirt','heavyweight plain tee']],
+[['white','sky blue','navy','black','olive','cream','brown','sage','burgundy','pinstripe'],['oxford button-down shirt','linen shirt','striped casual shirt','overshirt jacket','relaxed flannel shirt','minimal formal shirt']],
+[['indigo','light blue','black','washed grey','ecru','olive','charcoal','stone','dark blue','sand'],['straight jeans','relaxed denim jeans','tailored trousers','cargo pants','wide-leg trousers','tapered chinos']],
+[['white','black','red','cream','navy','grey','olive','blue','tan','monochrome'],['low-top sneakers','retro court sneakers','running sneakers','canvas trainers','leather casual shoes','minimal everyday sneakers']],
+[['black','charcoal','cream','olive','navy','grey','burgundy','stone','forest green','sand'],['zip hoodie','crewneck sweatshirt','bomber jacket','oversized denim jacket','lightweight windbreaker','minimal zip jacket']],
+[['silver','gold','black','two-tone','rose gold','navy','steel','brown','champagne','gunmetal'],['minimal steel wristwatch','classic leather strap watch','gold-tone dress watch','black dial wristwatch','chronograph watch','rectangular dress watch']],
+[['silver','gold','black','steel','matte silver','rose gold','gunmetal','two-tone','brushed gold','dark steel'],['minimal chain bracelet','beaded bracelet','cuff bracelet','link bracelet','woven cord bracelet','stacking bracelet']],
+[['silver','gold','pearl white','black','rose gold','steel','champagne','two-tone','matte silver','crystal'],['minimal stud earrings','small hoop earrings','geometric earrings','pearl stud earrings','gold-tone hoops','sculpted metal earrings']],
+[['black','tan','cream','brown','olive','silver','gold','navy','burgundy','stone'],['leather crossbody bag','minimal belt','compact shoulder bag','card holder wallet','baseball cap','sleek sunglasses']]
+];
+const products=categories.flatMap((category,ci)=>Array.from({length:60},(_,i)=>{
+ const base=seedProducts[ci],looks=productLooks[ci],color=looks[0][i%looks[0].length],style=looks[1][Math.floor(i/looks[0].length)%looks[1].length];
+ const details=['classic fit','premium cotton','relaxed fit','minimal design','everyday essential','structured fit'][Math.floor(i/10)];
+ const id=ci*60+i+1, name=(color.charAt(0).toUpperCase()+color.slice(1))+' '+style+' — '+details;
+ const imageQuery=encodeURIComponent([color,style,details].join(','));
+ return {...base,id,category,name,price:Math.max(399,base.price+((i%12)-5)*100),image:'https://loremflickr.com/800/1000/'+imageQuery+'?lock='+id,tag:i===0?base.tag:'CURATED EDIT'};
+}));
 const money=n=>'₹'+n.toLocaleString('en-IN');
 function App(){const[category,setCategory]=useState('All'),[search,setSearch]=useState(''),[wish,setWish]=useState([]),[cart,setCart]=useState([]),[drawer,setDrawer]=useState(''),[toast,setToast]=useState(''),[sort,setSort]=useState('Featured'),[stylist,setStylist]=useState(''),[email,setEmail]=useState(''),[subscribed,setSubscribed]=useState(false),[menu,setMenu]=useState(false);
 const filtered=useMemo(()=>products.filter(p=>(category==='All'||p.category===category)&&(p.name+' '+p.brand+' '+p.category).toLowerCase().includes(search.toLowerCase())).sort((a,b)=>sort==='Price: low to high'?a.price-b.price:sort==='Price: high to low'?b.price-a.price:0),[category,search,sort]);
