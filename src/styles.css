@@ -46,3 +46,78 @@ footer{padding:45px 7% 22px;background:#efeadf}.footer-bottom{border-top-color:#
   .product-name{line-height:1.4;min-height:38px}
   .quick-add{left:5px;right:5px;bottom:5px;padding:9px 6px;font-size:8px}
 }
+
+/* DENCO ART-DIRECTION PASS — editorial photography, layered surfaces, refined motion */
+:root{--denco-black:#0b0b0d;--denco-brass:#c9a96a;--denco-ivory:#f5f1e8}
+.hero{isolation:isolate;background:#171615}
+.hero-photo{transform:scale(1.015);filter:saturate(.62) contrast(1.06);background-position:center 42%}
+.hero-shade{background:linear-gradient(90deg,rgba(8,8,9,.88) 0%,rgba(8,8,9,.58) 38%,rgba(8,8,9,.08) 76%),linear-gradient(0deg,rgba(8,8,9,.46),transparent 48%)}
+.hero-copy{max-width:620px}
+.hero h1{font-size:clamp(64px,8vw,116px);line-height:.91;letter-spacing:-3px;text-shadow:0 4px 35px #0003}
+.hero h1 em{color:#e4c987}
+.hero-copy p{font-size:14px;max-width:390px;color:#f0ece5}
+.button-gold{box-shadow:0 8px 28px #0002;letter-spacing:.6px}
+.hero-note{letter-spacing:2.2px}
+.trust-row{background:#f0ece3;padding-top:32px;padding-bottom:32px}
+.trust-row b{letter-spacing:.2px}
+.category-atelier{padding:104px 5% 90px;background:#e8e2d6}
+.atelier-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
+.atelier-heading h2{font:500 clamp(46px,5.4vw,72px)/1.02 'Playfair Display',serif;letter-spacing:-1.8px;margin:16px 0 0}
+.atelier-heading h2 em{color:#a58345}
+.atelier-heading>p{max-width:290px;color:#70695d;font-size:12px;line-height:1.9;margin:0 0 5px}
+.atelier-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px}
+.atelier-tile{height:clamp(300px,34vw,510px);min-height:0;position:relative;overflow:hidden;border:0;padding:0;text-align:left;background:#292621;color:#fff;isolation:isolate}
+.atelier-tile:after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(0deg,rgba(8,8,8,.8),rgba(8,8,8,.06) 62%),linear-gradient(90deg,#1112,transparent)}
+.atelier-tile img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.72) contrast(1.04);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s}
+.atelier-tile:hover img{transform:scale(1.055);filter:saturate(.95) contrast(1.04)}
+.atelier-number,.atelier-title{position:absolute;z-index:1;left:24px;right:20px}
+.atelier-number{top:23px;font-size:8px;letter-spacing:2px;color:#f0dcae}
+.atelier-title{bottom:25px;display:flex;align-items:center;justify-content:space-between;gap:12px;font:500 clamp(21px,2vw,31px)/1.15 'Playfair Display',serif}
+.atelier-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:1px solid #c9c0b0}
+.atelier-categories button{display:flex;align-items:center;gap:13px;text-align:left;background:transparent;border:0;border-bottom:1px solid #c9c0b0;padding:17px 8px;font-size:11px;color:#292720;transition:padding .2s,color .2s}
+.atelier-categories button:hover{padding-left:14px;color:#9b793d}
+.atelier-categories button span{font-size:8px;color:#9d824f;letter-spacing:1px}
+.atelier-categories button svg{margin-left:auto;flex-shrink:0}
+.shop-section{background:#f8f6f1}
+.section-top h2{font-size:clamp(52px,6vw,82px);letter-spacing:-2.2px}
+.section-top>p{max-width:330px}
+.shop-controls{border-color:#d8d0c0}
+.filter{border-radius:0;transition:all .2s}
+.filter:hover{color:#151515;background:#eeeadf}
+.filter.active{background:#151515;color:#f4f0e7;border-color:#151515}
+.product-image{background:linear-gradient(145deg,#eee9df,#e1dbcf);overflow:hidden}
+.product-image img{mix-blend-mode:multiply;filter:saturate(.86);transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .4s}
+.product-card:hover .product-image img{transform:scale(1.055);filter:saturate(1.04)}
+.product-tag{letter-spacing:1.25px;color:#3e392e;background:#f8f5edeb}
+.heart-btn{box-shadow:0 2px 12px #0000000c;transition:transform .2s,color .2s}
+.heart-btn:hover{transform:scale(1.08)}
+.quick-add{background:#101014;color:#f7f3e9}
+.product-brand{color:#8b7956}
+.product-name{font-size:12px;letter-spacing:-.1px}
+.product-price{font-size:12px}
+.manifesto{background:radial-gradient(ellipse at 18% 50%,#29251d,#0d0d0f 65%);position:relative}
+.manifesto-art{background:radial-gradient(circle at 50% 46%,#4a3c25 0,#211e19 38%,#101012 73%)}
+.art-ring{border-color:#c8a35e;box-shadow:0 0 0 1px #d6b56d12,0 0 0 22px #d6b56d08,0 0 0 56px #d6b56d05}
+.art-word{color:#dfc17f;text-shadow:0 10px 45px #0005}
+.stylist-section{background:#eae4d8}
+.stylist-icon{background:#f7f3e9}
+.mood{transition:background .2s,border-color .2s,transform .2s}
+.mood:hover{transform:translateY(-2px);border-color:#b69a62}
+.newsletter{background:radial-gradient(ellipse at 50% 0%,#30291d 0,#171719 60%)}
+.newsletter h2 em{color:#e0c17e}
+footer{background:#f0ece3}
+@media(max-width:760px){
+ .category-atelier{padding:66px 16px 56px}
+ .atelier-heading{display:block}
+ .atelier-heading>p{margin-top:15px}
+ .atelier-grid{grid-template-columns:1fr 1fr;gap:10px}
+ .atelier-tile{height:290px}
+ .atelier-wide{grid-column:1/-1;height:340px}
+ .atelier-number{left:15px;top:15px;font-size:7px}
+ .atelier-title{left:15px;right:12px;bottom:16px;font-size:22px}
+ .atelier-categories{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:18px}
+ .atelier-categories button{font-size:10px;padding:14px 3px;gap:8px}
+ .hero h1{letter-spacing:-2px}
+ .section-top h2{font-size:48px}
+}
+@media(prefers-reduced-motion:reduce){.atelier-tile img,.mood,.heart-btn{transition:none}}
